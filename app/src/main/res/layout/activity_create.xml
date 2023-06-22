@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".CreateActivity">
+
+    <TextView
+        android:id="@+id/createText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create New Activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="20dp"
+        android:textSize="20dp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/activitySport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sport:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createText"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/sportSpinner"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/sport_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/createText"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
+        android:id="@+id/activityDesc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Description:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activitySport"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/descriptionEditText"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:inputType="textMultiLine"
+        app:layout_constraintTop_toBottomOf="@id/sportSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="20dp"/>
+
+    <TextView
+        android:id="@+id/activityArea"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Area:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityDesc"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/areaSpinner"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/area_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/descriptionEditText"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="15dp"/>
+
+    <TextView
+        android:id="@+id/activityLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Location:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityArea"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/locationEditText"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/areaSpinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="15dp"
+        android:layout_marginEnd="35dp" />
+
+    <TextView
+        android:id="@+id/activityDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Date:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityLocation"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Button
+        android:id="@+id/dateButton"
+        android:layout_width="75dp"
+        android:layout_height="wrap_content"
+        android:text="select"
+        app:layout_constraintTop_toBottomOf="@id/locationEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="5dp"
+        android:textSize="10sp" />
+
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Date"
+        android:textSize="14sp"
+        app:layout_constraintTop_toBottomOf="@id/locationEditText"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="139dp"
+        android:layout_marginTop="25dp" />
+
+    <TextView
+        android:id="@+id/activityTime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Time:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityDate"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/timeSpinner"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/time_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/dateTextView"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="25dp"/>
+
+    <TextView
+        android:id="@+id/activitySkillLevel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Skill Level:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityTime"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/skillLevelSpinner"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/skill_level_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/timeSpinner"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:id="@+id/activityAgeGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Age Group:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activitySkillLevel"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/ageGroupSpinner"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/age_group_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/skillLevelSpinner"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:id="@+id/activityGender"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gender:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityAgeGroup"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/genderSpinner"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/gender_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/ageGroupSpinner"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="28dp"/>
+
+    <TextView
+        android:id="@+id/activityPax"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Pax:"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/activityGender"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="35dp"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <Spinner
+        android:id="@+id/paxSpinner"
+        android:layout_width="190dp"
+        android:layout_height="wrap_content"
+        android:entries="@array/pax_array"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/genderSpinner"
+        android:layout_marginEnd="35dp"
+        android:layout_marginTop="28dp"/>
+
+    <Button
+        android:id="@+id/createActivityBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Activity"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/paxSpinner"
+        android:layout_marginTop="35dp" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
